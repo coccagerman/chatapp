@@ -1,15 +1,16 @@
-import firebase from 'firebase'
+import firebase from 'firebase/app'
+import 'firebase/firestore'
+import 'firebase/auth'
 
-const config = {
-    apiKey: "AIzaSyBhesdZtKr7A44zmXm6iw9m-QljGsre_cM",
-    authDomain: "chatapp-464b6.firebaseapp.com",
-    projectId: "chatapp-464b6",
-    storageBucket: "chatapp-464b6.appspot.com",
-    messagingSenderId: "792197748178",
-    appId: "1:792197748178:web:ce1b27a39c220b418e640b"
-  }
+const app = firebase.initializeApp({
+  apiKey: 'AIzaSyCeZ7gLeGTYs61wiQnSXQ8Jrugws23Gy34',
+  authDomain: 'chatapp-e77ad.firebaseapp.com',
+  projectId: 'chatapp-e77ad',
+  storageBucket: 'chatapp-e77ad.appspot.com',
+  messagingSenderId: '142369261110',
+  appId: '1:142369261110:web:7b938f9f26007afd90ba97'
+})
 
-firebase.initializeApp(config)
-export const auth = firebase.auth
-export const db = firebase.database()
-  
+export const auth = firebase.auth()
+export const database = firebase.firestore(app).collection('messages')
+
