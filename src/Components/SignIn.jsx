@@ -9,6 +9,8 @@ export default function SignIn () {
     }
 
     return (
-        <button onClick={() => signInWithGoogle()}>Sign in with Google</button>
+        <section className='signIn'>
+            <button className='signIn-btn' onClick={() => signInWithGoogle()}>Sign in with Google</button>
+        </section>
     )
 }

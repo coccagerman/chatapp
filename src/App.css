@@ -13,7 +13,6 @@ body {
   height: 10vh;
   min-height: 50px;
   color: white;
-  position: fixed;
   width: 100%;
   max-width: 728px;
   top: 0;
@@ -35,11 +34,12 @@ body {
 
 main {
   padding: 10px;
-  height: 80vh;
-  margin: 10vh 0 10vh;
+  height: 78vh;
+  margin: 0;
   overflow-y: scroll;
   display: flex;
   flex-direction: column;
+  background-color: #ccc;
 }
 
 main::-webkit-scrollbar {
@@ -100,15 +100,17 @@ button:disabled {
 }
 
 
-.sign-in {
-  color: #282c34;
-  background: white;
-  max-width: 400px;
+.signIn {
+  color: white;
+  background-color: white !important;
   margin: 0 auto;
 }
 
-
-
+.signIn-btn {
+  background-color: rgb(0, 119, 255);
+  max-width: 50%;
+  margin: auto;
+}
 
 ul, li {
   text-align: left;
